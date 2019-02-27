@@ -31,6 +31,11 @@ Useage:
                       CMX_lookup(), and then moves the client directly onto the "QuarantineMacList".
     Purge_CMXclient() - Searches the "InfectMacList" and the "QuarantineMacList" for the Mac address and removes it from either list.
     
+    You don't have modify the cmx_classes file, but they are imported.  This file contains Class structures for the various API calls I've
+    set up for CMX.  Not all API fields are included in each corresponding class, and sometimes I added some "Local" fields to assist in
+    the development of this project, but probably wouldn't be needed in a production mode.  Each class has a "print" function as well, that
+    maybe useful.
+    
 Caveats:
     -  You need to download the floor maps manually at this time.  The name of those images must map those found in the "floorinfo" --> 
        "imageName" field in the v2 "/api/location/v2/clients".   (This requires more steps in v3 API.)   If a floor image doesn't exist,
