@@ -1,7 +1,7 @@
 # IRflow-CMX
 CMX Modules for IRflow Project
 
-This repositoryt contains a series of routines to locate clients with IOCs (by MAC address), and create an image showing the
+This repository contains a series of routines to locate clients with IOCs (by MAC address), and create an image showing the
 location of that MAC address.  Development was done primarily on CMX with v2 API calls.  Later I started adding code to support
 CMX v3 API calls, but I didn't have a v3 server that consistently provided me with data.  Within the code you will see tests in
 many routines like [if CMXversions.Loc_api_version == "v2":].  These are the begining of my support for v3 calls, but as a whole,
@@ -11,11 +11,11 @@ You may see a few modules that are not directly required by the IRflow project. 
 they're not "called", they can be used for additional features as needed.
 
 Useage:   
-    Modify the env_vars.py file with your own credentials.  You will need to import that into the main program as "CMX".  For testing,
-    I've used a couple different publically accessible sandbox systems.  Both are listed in this file, and can be toggled by selecting
-    one verses the other within the CMX-Modules.py file.  (i.e.)
+    Modify the env_vars.py file with your own CMX server credentials.  You will need to import that into the main program as "CMX".  
+    For testing, I've used a couple different publically accessible sandbox systems.  Both are listed in this file, and they can be 
+    toggled by selecting one verses the other within the CMX-Modules.py file.  (See "import" lines below.)
     
-    #from env_vars import Devnet_cmx_sandbox as CMX		# CMX (Devnet) locations Sandbox. v3 data but it returns empty API results
+    #from env_vars import Devnet_cmx_sandbox as CMX		    # CMX (Devnet) locations Sandbox. v3 data but it returns empty API results
     from env_vars import dCloud_apac_cmx_sandbox as CMX     # CMX APAC Sandbox.   v2 data but it returns API results
     
     There is no "main()" program per-se for these routines.  You simply need to call the CMX_lookup() routine to get your client
